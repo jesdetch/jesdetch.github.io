@@ -1,0 +1,21 @@
+<!-- Cards -->
+
+<div *ngFor = 'let image of images' style="margin-bottom : 25px" >
+    <mat-card class="card" >
+      <img mat-card-image src={{image.img_src}} alt="Photo of a mars">
+      <mat-card-content>
+        <h3>
+          {{image.rover.name}} rover - {{image.camera.full_name}}
+        </h3>
+        <p>{{image.earth_date}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <input type="checkbox" class="btn-check " id={{image.id}} autocomplete="off" checked />
+        <label class="btn btn-success text-white btn-rounded" for="{{image.id}}">Like</label>
+      </mat-card-actions>
+    </mat-card>
+</div>
+ 
+ 
+
+
